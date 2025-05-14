@@ -2,97 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Emissions-Cost Simulation Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonya Gopinath Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0 20px;
-      background: #f5f5f5;
-    }
-    header, section {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 0;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    nav {
-      background: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .section-box {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header, section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h1, h2 { color: #004b6e; }
+    nav { background: #004b6e; color: white; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .section-content { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 40px; }
+    iframe, img { max-width: 100%; height: auto; border: none; }
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="#project">Project</a>
-    <a href="#model">Model</a>
-    <a href="#how">How It Works</a>
+    <a href="#home">Home</a>
+    <a href="#project">Capital Correction</a>
+    <a href="#volunteering">Volunteering</a>
+    <a href="#cv">CV</a>
+    <a href="#certifications">Certifications</a>
     <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <header>
-    <h1>Emissions-Cost Simulation Model</h1>
-    <p>A dynamic, interactive tool that quantifies how emissions affect profitability over time through labor productivity losses and carbon pricing, built using R Shiny.</p>
-  </header>
-
-  <section id="project" class="section-box">
-    <h2>About This Project</h2>
-    <p>This model aims to demonstrate a hidden cost pathway that many ESG reports overlook — how emissions can gradually undermine a firm’s long-term profitability by reducing labor productivity. Designed with the steel and cement industries in mind, the model lets users test different levers (renewables, offsets, and more) and visualize how emissions trajectories alter output, revenue, and profits over a 10-year horizon.</p>
+  <section id="home" class="section-content">
+    <h2>Welcome</h2>
+    <p>I'm Sonya Gopinath — a sustainability analyst and economist-in-training passionate about embedding climate logic into financial systems. I use tools like R, Python, and Shiny to build strategy models and visual tools that demonstrate the real economic risks of inaction on emissions.</p>
+    <img src="headshot.jpg" alt="Headshot of Sonya Gopinath" />
   </section>
 
-  <section id="model" class="section-box">
-    <h2>Interactive Model Access</h2>
-    <p><strong>Status:</strong> Hosted separately as a Shiny app.</p>
-    <p><strong>Link:</strong> <a href="#" target="_blank">[Insert Model Link]</a></p>
-    <p>This model is built in R Shiny and features:</p>
+  <section id="project" class="section-content">
+    <h2>Capital Correction Model</h2>
+    <p>This interactive Shiny tool models how emissions and poor environmental choices lead to financial penalties over a 10-year horizon. It’s built for internal strategy teams and ESG investors to simulate decisions in the steel sector.</p>
+    <p><a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" target="_blank">Launch the Live Model</a></p>
+    <p><a href="https://github.com/sonyagopinath/capital-correction-model" target="_blank">View Code on GitHub</a></p>
+  </section>
+
+  <section id="volunteering" class="section-content">
+    <h2>Volunteering & Leadership</h2>
+    <p>Photos from various projects with Arthanomics, the UN Millennium Fellowship, and accessibility initiatives in India:</p>
+    <img src="millennium_fellowship.jpg" alt="Millennium Fellowship Event" />
+    <img src="arthanomics_event.jpg" alt="Arthanomics Campaign" />
+  </section>
+
+  <section id="cv" class="section-content">
+    <h2>My CV</h2>
+    <p><a href="cv_sonya_gopinath.pdf" target="_blank">Download My CV</a></p>
+    <iframe src="cv_sonya_gopinath.pdf" width="100%" height="500px"></iframe>
+  </section>
+
+  <section id="certifications" class="section-content">
+    <h2>Certifications</h2>
     <ul>
-      <li>Industry selection and scenario toggles</li>
-      <li>Visual plots for emissions, output, revenue, and profits</li>
-      <li>Emissions intensity calculation and optional degradation toggle</li>
-      <li>Side-by-side profit projections with and without emissions impact</li>
+      <li>Python for Data Analysis – <a href="certificate_python.pdf" target="_blank">View Certificate</a></li>
+      <li>Introduction to ESG – <a href="certificate_esg.pdf" target="_blank">View Certificate</a></li>
     </ul>
   </section>
 
-  <section id="how" class="section-box">
-    <h2>How the Model Works</h2>
-    <p>The model starts with assumptions about capital productivity, labor force size, and baseline emissions. When emissions cross certain thresholds, labor productivity drops — which then lowers output growth, reduces revenue, and ultimately alters profitability.</p>
-    <p>It compares two profit curves:</p>
-    <ul>
-      <li><strong>Regular Profit Estimation:</strong> Based on output and revenue, without emissions impact.</li>
-      <li><strong>Profit After Emissions Costs:</strong> Adjusted to reflect the output drop from productivity loss and rising carbon costs.</li>
-    </ul>
-    <p>This approach brings microeconomic cost theory and ESG impact modeling into a simple, customizable tool.</p>
+  <section id="articles" class="section-content">
+    <h2>Articles & Writing</h2>
+    <p><a href="https://medium.com/@sonyagopinath" target="_blank">View My Articles on Medium</a></p>
   </section>
 
-  <section id="articles" class="section-box">
-    <h2>Articles & Writings</h2>
-    <p>Coming soon — short articles on:</p>
-    <ul>
-      <li>Why emissions intensity is an outdated metric</li>
-      <li>Connecting macro ESG theory with firm-level microeconomics</li>
-      <li>Hidden vulnerabilities in carbon-heavy growth strategies</li>
-    </ul>
-    <p>You can also find my dissertation (soon to be uploaded) covering labor productivity and heat exposure effects in Indian industry.</p>
+  <section id="contact" class="section-content">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sonyagopinath@gmail.com">sonyagopinath@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sonyagopinath/" target="_blank">linkedin.com/in/sonyagopinath</a></p>
   </section>
+
 </body>
 </html>
