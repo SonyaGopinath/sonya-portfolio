@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonya's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emissions-Cost Simulation Model</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      padding: 0 20px;
+      background: #f5f5f5;
     }
-    header {
-      background: #1a1a1a;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
+    header, section {
+      max-width: 900px;
       margin: auto;
+      padding: 30px 0;
     }
     h1, h2 {
-      margin-bottom: 0.5rem;
+      color: #333;
     }
-    a {
-      color: #007acc;
+    nav {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
     }
-    .project, .article-preview {
-      border: 1px solid #ddd;
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    footer {
-      background: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+    .section-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#project">Project</a>
+    <a href="#model">Model</a>
+    <a href="#how">How It Works</a>
+    <a href="#articles">Articles</a>
+  </nav>
+
   <header>
-    <h1>Sonya's Sustainability + Economics Portfolio</h1>
-    <p>Bold ideas, critical tools, and applied systems thinking</p>
+    <h1>Emissions-Cost Simulation Model</h1>
+    <p>A dynamic, interactive tool that quantifies how emissions affect profitability over time through labor productivity losses and carbon pricing, built using R Shiny.</p>
   </header>
 
-  <section>
-    <h2>About</h2>
-    <p>I’m Sonya, an economics graduate focused on sustainability, ESG strategy, and how capital can be redirected to serve people and the planet. This site showcases my simulation tools, data modeling work, and critical writing.</p>
+  <section id="project" class="section-box">
+    <h2>About This Project</h2>
+    <p>This model aims to demonstrate a hidden cost pathway that many ESG reports overlook — how emissions can gradually undermine a firm’s long-term profitability by reducing labor productivity. Designed with the steel and cement industries in mind, the model lets users test different levers (renewables, offsets, and more) and visualize how emissions trajectories alter output, revenue, and profits over a 10-year horizon.</p>
   </section>
 
-  <section>
-    <h2>Featured Tool</h2>
-    <div class="project">
-      <h3>Steel Industry Emissions-Cost Model</h3>
-      <p>An interactive Shiny app simulating how emissions, carbon pricing, and labour productivity losses shape firm-level profitability over time.</p>
-      <a href="https://your-shiny-app-link.com" target="_blank">🔗 Launch Model</a>
-    </div>
+  <section id="model" class="section-box">
+    <h2>Interactive Model Access</h2>
+    <p><strong>Status:</strong> Hosted separately as a Shiny app.</p>
+    <p><strong>Link:</strong> <a href="#" target="_blank">[Insert Model Link]</a></p>
+    <p>This model is built in R Shiny and features:</p>
+    <ul>
+      <li>Industry selection and scenario toggles</li>
+      <li>Visual plots for emissions, output, revenue, and profits</li>
+      <li>Emissions intensity calculation and optional degradation toggle</li>
+      <li>Side-by-side profit projections with and without emissions impact</li>
+    </ul>
   </section>
 
-  <section>
-    <h2>Articles</h2>
-    <div class="article-preview">
-      <h3><a href="articles/outdated-metrics.html">Outdated Metrics in ESG Reports: The Mess</a></h3>
-      <p>A critique of emissions intensity reporting based on revenue, and why we need sharper, grounded indicators.</p>
-    </div>
-    <!-- Add more article blocks as needed -->
+  <section id="how" class="section-box">
+    <h2>How the Model Works</h2>
+    <p>The model starts with assumptions about capital productivity, labor force size, and baseline emissions. When emissions cross certain thresholds, labor productivity drops — which then lowers output growth, reduces revenue, and ultimately alters profitability.</p>
+    <p>It compares two profit curves:</p>
+    <ul>
+      <li><strong>Regular Profit Estimation:</strong> Based on output and revenue, without emissions impact.</li>
+      <li><strong>Profit After Emissions Costs:</strong> Adjusted to reflect the output drop from productivity loss and rising carbon costs.</li>
+    </ul>
+    <p>This approach brings microeconomic cost theory and ESG impact modeling into a simple, customizable tool.</p>
   </section>
 
-  <section>
-    <h2>Dissertation</h2>
-    <p>Coming soon: my Master’s dissertation on how heatwave-induced productivity losses challenge industrial resilience and capital returns in high-emission sectors.</p>
+  <section id="articles" class="section-box">
+    <h2>Articles & Writings</h2>
+    <p>Coming soon — short articles on:</p>
+    <ul>
+      <li>Why emissions intensity is an outdated metric</li>
+      <li>Connecting macro ESG theory with firm-level microeconomics</li>
+      <li>Hidden vulnerabilities in carbon-heavy growth strategies</li>
+    </ul>
+    <p>You can also find my dissertation (soon to be uploaded) covering labor productivity and heat exposure effects in Indian industry.</p>
   </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | <a href="/Sonya_CV.pdf" target="_blank">CV</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Sonya. All rights reserved.</p>
-  </footer>
 </body>
 </html>
