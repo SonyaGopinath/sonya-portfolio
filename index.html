@@ -5,13 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sonya's Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header, section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h1, h2 { color: #004b6e; }
-    nav { background: #004b6e; color: white; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    .section-content { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 40px; }
-    iframe, img { max-width: 100%; height: auto; border: none; }
+    body {
+      font-family: Cambria, serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #004b6e;
+      margin-bottom: 15px;
+    }
+    nav {
+      background: #004b6e;
+      color: white;
+      padding: 15px 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section-content {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    iframe, img {
+      max-width: 100%;
+      height: auto;
+      border: none;
+    }
+    .profile-img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    .witty-text {
+      font-style: italic;
+      color: #777;
+      margin-top: 10px;
+    }
+    .button-link {
+      background-color: #004b6e;
+      color: white;
+      padding: 8px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .button-link:hover {
+      background-color: #00628d;
+    }
   </style>
 </head>
 <body>
@@ -28,27 +85,29 @@
 
   <section id="home" class="section-content">
     <h2>Welcome</h2>
-    <p>I'm Sonya Gopinath - a researcher, economist, data analyst and a growing sustainability analyst. I recently graduated from the London School of Economics with an MSc in Environmental Economics, while chasing my passion for embedding climate logic into financial systems. </p>
-    <img src="sonya profile.jpg" alt="Headshot of Sonya Gopinath" />
+    <p>I'm Sonya Gopinath—a researcher, economist, data analyst, and a passionate advocate for integrating climate logic into financial systems. I recently graduated with an MSc in Environmental Economics from the London School of Economics, and I’m on a mission to help reshape sustainability and economics for a better world.</p>
+    <img src="sonya profile 2.jpg" alt="Headshot of Sonya Gopinath" class="profile-img" width="200" height="200" />
   </section>
 
   <section id="project" class="section-content">
-    <h2>Capital Correction Model</h2>
-    <p>This interactive Shiny tool models how emissions and poor environmental choices lead to financial penalties over a 10-year horizon. It’s built for internal strategy teams and ESG investors to simulate decisions in the steel sector.</p>
-    <p><a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" target="_blank">Launch the Live Model</a></p>
-    <p><a href="https://github.com/sonyagopinath/capital-correction-model" target="_blank">View Code on GitHub</a></p>
+    <h2>The Capital Correction Project</h2>
+    <p>This interactive Shiny tool models the financial consequences of emissions and environmental degradation over a 10-year horizon. It’s designed for internal strategy teams and ESG investors to simulate decision-making in industries like steel, where environmental choices drive long-term profitability.</p>
+    <p><a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" target="_blank" class="button-link">Launch the Live Model</a></p>
+    <p><a href="https://github.com/sonyagopinath/capital-correction-model" target="_blank" class="button-link">View Code on GitHub</a></p>
   </section>
 
   <section id="volunteering" class="section-content">
     <h2>Volunteering & Leadership</h2>
-    <p>Photos from various projects with Arthanomics, the UN Millennium Fellowship, and accessibility initiatives in India:</p>
-    <img src="millennium_fellowship.jpg" alt="Millennium Fellowship Event" />
-    <img src="arthanomics_event.jpg" alt="Arthanomics Campaign" />
+    <p>Currently under construction—but stay tuned for stories of my work with Arthanomics, the UN Millennium Fellowship, and my hands-on involvement in improving accessibility and sustainability in India!</p>
+    <p class="witty-text">Can’t wait to share more—but I’m still working on it, just like my next big idea!</p>
+    <!-- Add images once ready -->
+    <!-- <img src="millennium_fellowship.jpg" alt="Millennium Fellowship Event" /> -->
+    <!-- <img src="arthanomics_event.jpg" alt="Arthanomics Campaign" /> -->
   </section>
 
   <section id="cv" class="section-content">
     <h2>My CV</h2>
-    <p><a href="cv_sonya_gopinath.pdf" target="_blank">Download My CV</a></p>
+    <p><a href="cv_sonya_gopinath.pdf" target="_blank" class="button-link">Download My CV</a></p>
     <iframe src="cv_sonya_gopinath.pdf" width="100%" height="500px"></iframe>
   </section>
 
@@ -61,14 +120,15 @@
   </section>
 
   <section id="articles" class="section-content">
-    <h2>Articles & Writing</h2>
-    <p><a href="https://medium.com/@sonyagopinath" target="_blank">View My Articles on Medium</a></p>
+    <h2>My Articles and Writing</h2>
+    <p>Explore my thoughts on sustainability, economics, and the transformative role of data and systems in creating a greener future. The first article is coming soon—stay tuned for my critiques and solutions on the outdated metrics in ESG reporting!</p>
+    <p><a href="https://medium.com/@rg.sonya22" target="_blank" class="button-link">Read more on Medium</a></p>
   </section>
 
   <section id="contact" class="section-content">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:sonyagopinath@gmail.com">sonyagopinath@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sonyagopinath/" target="_blank">linkedin.com/in/sonyagopinath</a></p>
+    <p>Email: <a href="mailto:sonya.r.gopinath@gmail.com">sonya.r.gopinath@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sonya-gopinath/" target="_blank">Sonya Gopinath</a></p>
   </section>
 
 </body>
