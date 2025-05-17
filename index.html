@@ -233,24 +233,17 @@
       #contact .icons a {
         font-size: 1.8rem;
       }
-      #about {
+    #about {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: auto;
   text-align: center; /* Ensures that the section is centered */
 }
 
-#about h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #3d3d4e;
-}
-
 .about-content {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centers everything in the section */
-  flex-wrap: wrap;
+  align-items: flex-start; /* Aligns the top of the profile image and text */
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -263,11 +256,20 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.bio-content {
+  text-align: left;
+  max-width: 800px;
+}
+
+#about h2 {
+  font-size: 2.2rem;
+  color: #3d3d4e;
+  margin-bottom: 10px; /* Small margin to separate title from bio */
+}
+
 #about p {
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 800px;
-  text-align: left; /* Aligns the text to the left of the section */
 }
 
     }
@@ -300,6 +302,18 @@
       <img src="sonya profile 2.JPG" alt="Sonya's Profile Picture" />
     </div>
       <p>I’m Sonya, an LSE grad actively tackling real-world sustainability challenges. Right now, I’m deep into shaping strategies for sustainability in high-emitting sectors, building practical models for carbon reduction in industries like steel and cement. I’m also researching how extreme heat impacts productivity in India, using data-driven tools to push the boundaries of climate research. With my background in inclusive development, I’m bringing creative, solution-oriented thinking to every project I work on. Whether that’s shaping ESG strategies, supporting policy change, or engaging communities on climate action. My goal is to bridge the gap between data, policy, and real-world impact, contributing to change that’s both achievable and lasting.</p>
+  </div>
+</section>
+
+  <section id="about">
+  <div class="about-content">
+    <div class="profile-image">
+      <img src="sonya profile 2.JPG" alt="Sonya's Profile Picture" />
+    </div>
+    <div class="bio-content">
+      <h2>About Me</h2>
+      <p>I’m Sonya, an LSE grad actively tackling real-world sustainability challenges. Right now, I’m deep into shaping strategies for sustainability in high-emitting sectors, building practical models for carbon reduction in industries like steel and cement. I’m also researching how extreme heat impacts productivity in India, using data-driven tools to push the boundaries of climate research. With my background in inclusive development, I’m bringing creative, solution-oriented thinking to every project I work on. Whether that’s shaping ESG strategies, supporting policy change, or engaging communities on climate action. My goal is to bridge the gap between data, policy, and real-world impact, contributing to change that’s both achievable and lasting.</p>
+    </div>
   </div>
 </section>
   
