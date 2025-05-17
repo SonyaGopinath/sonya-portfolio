@@ -233,6 +233,30 @@
       #contact .icons a {
         font-size: 1.8rem;
       }
+      .about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d0cfe3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
     }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -254,16 +278,20 @@
     <p>Creating data-backed strategies for a more sustainable world - one model at a time.</p>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
     <div class="profile-image">
-  <img src="sonya profile 2.JPG" alt="Profile Picture">
-</div>
-    <p>I'm a recent London School of Economics graduate passionate about turning evidence into action. My academic and project work bridges sustainability, data, and strategy, with experience spanning environmental modelling, research, nonprofit outreach, and content marketing. I thrive in roles where communication, analysis, and impact intersect.</p>
+      <img src="sonya profile 2.JPG" alt="Sonya's profile photo" />
+    </div>
+    <div class="about-text">
+      <p>I’m Sonya, an LSE grad actively tackling real-world sustainability challenges. Right now, I’m deep into shaping strategies for sustainability in high-emitting sectors, building practical models for carbon reduction in industries like steel and cement. I’m also researching how extreme heat impacts productivity in India, using data-driven tools to push the boundaries of climate research. With my background in inclusive development, I’m bringing creative, solution-oriented thinking to every project I work on. Whether that’s shaping ESG strategies, supporting policy change, or engaging communities on climate action. My goal is to bridge the gap between data, policy, and real-world impact, contributing to change that’s both achievable and lasting.</p>
+    </div>
+  </div>
+</section>
 
-    
-  </section>
-
+  
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
