@@ -64,6 +64,15 @@
       color: var(--accent);
     }
 
+    .profile-image img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d0cfe3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
     .project-card {
       background: white;
       border: 1px solid #ddd;
@@ -77,6 +86,74 @@
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
+
+    /* Write-ups Section */
+.section {
+  padding: 80px 20px;
+  background-color: #f7f5fc;
+  color: #1c1c1e;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #3d3d4e;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: #5a5a6e;
+  line-height: 1.6;
+}
+
+.writeups-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.writeup-card {
+  background: #e6e3f0;
+  border: 1px solid #d0cfe3;
+  border-radius: 16px;
+  padding: 30px;
+  width: 280px;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.writeup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.writeup-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1c1c1e;
+}
+
+.writeup-content p {
+  font-size: 0.95rem;
+  color: #3e3e4e;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .writeups-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .writeup-card {
+    width: 90%;
+  }
+}
 
     .resume-button {
       display: inline-block;
@@ -125,6 +202,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="#writeups">Thoughts & Write-Ups</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -137,7 +215,11 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a recent London School of Economics graduate with a passion for turning evidence into action. My academic and project work bridges sustainability, data, and strategy, with experience spanning environmental modelling, research, nonprofit outreach, and content marketing. I thrive in roles where communication, analysis, and impact intersect.</p>
+    <p>I'm a recent London School of Economics graduate passionate about turning evidence into action. My academic and project work bridges sustainability, data, and strategy, with experience spanning environmental modelling, research, nonprofit outreach, and content marketing. I thrive in roles where communication, analysis, and impact intersect.</p>
+
+    <div class="profile-image">
+  <img src="your-image.jpg" alt="Profile Picture">
+</div>
   </section>
 
   <section id="projects">
@@ -148,6 +230,34 @@
     </div>
   </section>
 
+<section id="writeups" class="section">
+  <h2 class="section-title">✍️ Thoughts & Write-ups</h2>
+  <p class="section-subtitle">
+    Here’s where I document what I’ve observed, questioned, and tried to understand—from climate adaptation strategies and environmental policy to the social mechanics of change.
+    The write-ups include short-form reflections on Medium, as well as my Master’s dissertation, which takes a data-driven look at labour productivity during heatwaves in India.
+  </p>
+
+  <div class="writeups-container">
+    <!-- Medium Article Card -->
+    <a href="https://medium.com/@rg.sonya22" target="_blank" class="writeup-card">
+      <div class="writeup-content">
+        <h3>View Medium Articles</h3>
+        <p>Short-form reflections on climate, systems, and strategy.</p>
+      </div>
+    </a>
+
+    <!-- Dissertation Card -->
+    <a href="your-dissertation.pdf" download class="writeup-card">
+      <div class="writeup-content">
+        <h3>Download Dissertation</h3>
+        <p>Research on heatwaves & productivity in high-heat regions.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+      
+
   <section id="resume">
     <h2>Resume</h2>
     <a class="resume-button" href="Sonya Gopinath Resume Sustainability.pdf" target="_blank">Download Resume</a>
@@ -156,8 +266,8 @@
   <section id="contact">
     <h2>Contact</h2>
     <div class="icons">
-      <a href="mailto:your.email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:sonya.r.gopinath@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://https://www.linkedin.com/in/sonya-gopinath/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/yourgithub" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://medium.com/@rg.sonya22/outdated-metrics-in-esg-reports-the-revenue-centric-ethos-7b7b6054fcd5" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
     </div>
