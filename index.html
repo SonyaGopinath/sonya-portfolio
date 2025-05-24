@@ -233,36 +233,36 @@
       #contact .icons a {
         font-size: 1.8rem;
       }
-/* About Section Container */
+/* Base Styles (Works on all screen sizes but more refined for larger screens) */
 #about {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  width: 100%;
 }
 
 .about-container {
   display: flex;
-  align-items: center;  /* Aligns both image and text vertically */
-  gap: 20px;  /* Adjusts space between image and text */
+  align-items: center;
+  gap: 20px;
   max-width: 1200px;
   width: 100%;
+  justify-content: center; /* Center align everything horizontally */
 }
 
-/* Profile Picture - Ensures it is circular and has shadow */
 .profile-pic {
-  width: 150px;  /* Control width of the image */
-  height: 150px;  /* Ensures it’s a square */
-  object-fit: cover;  /* Keeps the aspect ratio */
-  border-radius: 50%;  /* Makes the image circular */
+  width: 150px;  /* Fixed size of the image */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;  /* Ensures the image is circular */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow */
 }
 
-/* About Text - On the right of the image */
 .about-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* Vertically aligns the text */
+  justify-content: center;
   max-width: 600px;
 }
 
@@ -277,6 +277,31 @@
   font-size: 16px;
   line-height: 1.6;
 }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;  /* Stack image and text */
+    align-items: center;
+  }
+
+  .profile-pic {
+    width: 120px;  /* Adjust size for smaller screens */
+    height: 120px;
+  }
+
+  .about-text {
+    text-align: center;  /* Center text for mobile */
+  }
+}
+
+/* Optional: Add a larger breakpoint for extra-large screens */
+@media (min-width: 1200px) {
+  .about-container {
+    gap: 30px;  /* Extra space between image and text for larger screens */
+  }
+}
+
 
     }
   </style>
