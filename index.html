@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>Sonya's Portfolio</title>
   <style>
 :root {
@@ -71,8 +72,8 @@ section:nth-of-type(even) {
 }
 
 .profile-image img {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #d0cfe3;
@@ -82,7 +83,7 @@ section:nth-of-type(even) {
 #about h2, #projects h2, #resume h2, #contact h2 {
   font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: #3d3d4e;
 }
 
@@ -94,23 +95,62 @@ section:nth-of-type(even) {
   text-align: center;
 }
 
-#projects .project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem 0;
-  text-align: center;
-}
-
-.project-info h3, .project-card h3 {
-  font-size: 1.8rem;
-  color: #4b3e6e;
-  margin-bottom: 10px;
-}
-
-.project-info p, .project-card p {
+/* --- Capital Correction Section --- */
+#projects .project-blurb {
+  max-width: 750px;
+  margin: 0 auto 2.5rem;
   font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+#projects .app-card {
+  background: #e6e3f0;
+  border: 1px solid #d0cfe3;
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#projects .app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#projects .app-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #4b3e6e;
+}
+
+#projects .app-card p {
+  font-size: 1rem;
   color: #555;
+  margin-bottom: 20px;
+}
+
+#projects .launch-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+#projects .launch-button:hover {
+  background: #9a80cc;
+}
+
+#projects .launch-button i {
+  margin-left: 8px;
 }
 
 .resume-button {
@@ -333,16 +373,25 @@ footer {
   </div>
 </section>
   
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>The Capital Correction Project</h3>
-    <p>Explore the interactive model I built to simulate emissions trade-offs and carbon cost strategies:</p>
-    <a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" target="_blank" rel="noopener noreferrer">
-      Launch Shiny App
+ <section id="projects" class="project-section">
+  <h2>The Capital Correction Project</h2>
+  <p class="project-blurb">
+    This initiative models real-world trade-offs between economic growth and decarbonisation. 
+    The goal? Equip businesses and policymakers with better insight into emissions, risk pricing, and reduction strategy 
+    in hard-to-abate sectors like steel and cement. This is one step toward aligning capital with climate priorities.
+  </p>
+
+  <div class="app-card">
+    <h3>Explore the Simulation Model</h3>
+    <p>A hands-on tool to experiment with carbon cost, policy signals, and supply chain pressure in industrial sectors.</p>
+    <a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="launch-button">
+       Launch App <i class="fas fa-rocket"></i>
     </a>
-    </div>
-  </section>
+  </div>
+</section>
 
 <section id="writeups" class="section">
   <h2 class="section-title">✍️ Thoughts & Write-ups</h2>
