@@ -233,34 +233,49 @@
       #contact .icons a {
         font-size: 1.8rem;
       }
+/* About Section Container */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .about-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px;
+  align-items: center;  /* Aligns both image and text vertically */
+  gap: 20px;  /* Adjusts space between image and text */
+  max-width: 1200px;
+  width: 100%;
 }
 
+/* Profile Picture - Ensures it is circular and has shadow */
 .profile-pic {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
+  width: 150px;  /* Control width of the image */
+  height: 150px;  /* Ensures it’s a square */
+  object-fit: cover;  /* Keeps the aspect ratio */
+  border-radius: 50%;  /* Makes the image circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Adds shadow */
 }
 
+/* About Text - On the right of the image */
 .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically aligns the text */
   max-width: 600px;
 }
 
 .about-text h2 {
-  margin: 0 0 10px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .about-text p {
-  line-height: 1.6;
+  margin: 10px 0 0 0;
   font-size: 16px;
+  line-height: 1.6;
 }
 
     }
