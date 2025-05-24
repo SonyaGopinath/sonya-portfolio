@@ -234,38 +234,37 @@
         font-size: 1.8rem;
       }
 #about {
-  display: flex;
-  align-items: flex-start;
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
+  padding: 40px;
+  background-color: #f9f9f9;
 }
 
-.profile-image img {
-  width: 180px;
-  height: 180px;
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.profile-pic {
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #d0cfe3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.bio-content {
-  margin-left: 2.5rem;
+.about-text {
   flex: 1;
 }
 
-.bio-content h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  color: #3d3d4e;
+.about-text h2 {
+  margin: 0;
+  font-size: 28px;
 }
 
-.bio-content p {
-  font-size: 1.1rem;
+.about-text p {
+  margin-top: 12px;
+  font-size: 16px;
   line-height: 1.6;
-  max-width: 700px;
 }
 
     }
@@ -290,12 +289,12 @@
   </section>
 
   <section id="about">
-  <div class="profile-image">
-    <img src="sonya profile 2.JPG" alt="Sonya's Profile Picture" />
-  </div>
-  <div class="bio-content">
-    <h2>About Me</h2>
+  <div class="about-container">
+    <img src="sonya profile 2.JPG" alt="Profile Picture" class="profile-pic">
+    <div class="about-text">
+      <h2>About Me</h2>
       <p>I’m Sonya, an LSE grad actively tackling real-world sustainability challenges. Right now, I’m deep into shaping strategies for sustainability in high-emitting sectors, building practical models for carbon reduction in industries like steel and cement. I’m also researching how extreme heat impacts productivity in India, using data-driven tools to push the boundaries of climate research. With my background in inclusive development, I’m bringing creative, solution-oriented thinking to every project I work on. Whether that’s shaping ESG strategies, supporting policy change, or engaging communities on climate action. My goal is to bridge the gap between data, policy, and real-world impact, contributing to change that’s both achievable and lasting.</p>
+    </div>
   </div>
 </section>
   
@@ -303,7 +302,10 @@
     <h2>Projects</h2>
     <div class="project-card">
       <h3>The Capital Correction Project</h3>
-      <p>A strategic modelling initiative to map sustainability incentives in high-emission industries. Focused on ESG-aligned growth opportunities across the steel and cement sectors.</p>
+    <p>Explore the interactive model I built to simulate emissions trade-offs and carbon cost strategies:</p>
+    <a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" target="_blank" rel="noopener noreferrer">
+      Launch Shiny App
+    </a>
     </div>
   </section>
 
