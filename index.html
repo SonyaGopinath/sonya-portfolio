@@ -2,444 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <title>Sonya's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-:root {
-  --primary: #b9a3e3; /* lilac */
-  --background: #f9f7fc;
-  --section-alt: #f0edf7;
-  --text: #1a1a1a;
-  --accent: #555;
-}
+    :root {
+        --primary-dark-green: #1f3d2a;
+        --secondary-gray: #444444;
+        --accent-blue: #5bc0eb;
+        --background-gradient-top: #f4f7f5;
+        --background-gradient-bottom: #e9eceb;
+        --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --hover-bright-blue: #7dd6f5;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    body {
+        font-family: 'Inter', sans-serif;
+        color: var(--secondary-gray);
+        background-color: #f5f5f5;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background-color: var(--background);
-  color: var(--text);
-}
+    h1, h2, h3 {
+        color: var(--primary-dark-green);
+        font-weight: 700;
+    }
 
-header {
-  position: sticky;
-  top: 0;
-  background: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-  z-index: 999;
-}
+    a {
+        color: var(--accent-blue);
+        text-decoration: none;
+    }
 
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 500;
-}
+    a:hover {
+        text-decoration: underline;
+    }
 
-section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
+    #landing {
+        background: linear-gradient(to bottom right, var(--background-gradient-top), var(--background-gradient-bottom));
+        padding: 60px 20px;
+        text-align: center;
+        color: var(--primary-dark-green);
+    }
 
-section:nth-of-type(even) {
-  background-color: var(--section-alt);
-}
+    .section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        box-shadow: var(--card-shadow);
+        border-radius: 12px;
+        margin: 40px 20px;
+    }
 
-.landing {
-  text-align: center;
-  padding-top: 6rem;
-}
+    .project {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: var(--card-shadow);
+        margin-bottom: 20px;
+    }
 
-.landing h1 {
-  font-size: 3rem;
-  color: var(--primary);
-}
+    .project h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
 
-.landing p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: var(--accent);
-}
+    button,
+    .button {
+        background-color: var(--accent-blue);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-.profile-image img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #d0cfe3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    button:hover,
+    .button:hover {
+        background-color: var(--hover-bright-blue);
+        transform: scale(1.03);
+        cursor: pointer;
+    }
 
-#about h2, #projects h2, #resume h2, #contact h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 0px;
-  color: #3d3d4e;
-}
-
-#about p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-/* --- Capital Correction Section --- */
-#projects .project-blurb {
-  max-width: 750px;
-  margin: 0 auto 2.5rem;
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.7;
-  text-align: center; /* ✅ center the blurb */
-}
-
-#projects .app-card {
-  background: #e6e3f0;
-  border: 1px solid #d0cfe3;
-  border-radius: 16px;
-  padding: 30px;
-  width: 300px;
-  margin: 0 auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  text-align: center; /* ✅ centers all content inside */
-}
-
-
-#projects .app-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-#projects .app-card h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #4b3e6e;
-}
-
-#projects .app-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-#projects .launch-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-#projects .launch-button:hover {
-  background: #9a80cc;
-}
-
-#projects .launch-button i {
-  margin-left: 8px;
-}
-
-.resume-button {
-  display: block;
-  padding: 0.75rem 1.5rem;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.resume-button:hover {
-  background: #9a80cc;
-}
-
-.section {
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  color: #3d3d4e;
-}
-
-.section-subtitle {
-  font-size: 1rem;
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  color: #5a5a6e;
-  line-height: 1.6;
-}
-
-.writeups-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.writeup-card {
-  background: #e6e3f0;
-  border: 1px solid #d0cfe3;
-  border-radius: 16px;
-  padding: 30px;
-  width: 280px;
-  text-align: left;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.writeup-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.writeup-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #1c1c1e;
-}
-
-.writeup-content p {
-  font-size: 0.95rem;
-  color: #3e3e4e;
-}
-
-#contact .icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-#contact .icons a {
-  color: #333;
-  font-size: 2rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-#contact .icons a:hover {
-  color: #7d6bb8;
-  transform: scale(1.2);
-}
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background: #f0edf7;
-}
-
-/* --- ABOUT SECTION SPECIFIC --- */
-#about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-}
-
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-  justify-content: center;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 600px;
-}
-
-.about-text h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.about-text p {
-  margin: 10px 0 0 0;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* --- RESPONSIVE BREAKPOINTS --- */
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .writeups-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .writeup-card {
-    width: 90%;
-  }
-
-  #contact .icons a {
-    font-size: 1.8rem;
-  }
-
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-}
-
-@media (min-width: 1200px) {
-  .about-container {
-    gap: 30px;
-  }
-}
-
-
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        margin-top: 40px;
+        color: var(--secondary-gray);
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div><strong>Sonya Gopinath</strong></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#writeups">Thoughts & Write-Ups</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="landing">
-    <h1>Sonya Gopinath</h1>
-    <p>Creating data-backed strategies for a more sustainable world - one model at a time.</p>
+  <section id="landing">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Exploring new frontiers in sustainability and climate finance.</p>
+    <a href="#about" class="button">Learn More</a>
   </section>
 
-  <section id="about">
-  <div class="about-container">
-    <img src="sonya profile 2.JPG" alt="Profile Picture" class="profile-pic">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>I’m Sonya, an LSE grad actively tackling real-world sustainability challenges. Right now, I’m deep into shaping strategies for sustainability in high-emitting sectors, building practical models for carbon reduction in industries like steel and cement. I’m also researching how extreme heat impacts productivity in India, using data-driven tools to push the boundaries of climate research. With my background in inclusive development, I’m bringing creative, solution-oriented thinking to every project I work on. Whether that’s shaping ESG strategies, supporting policy change, or engaging communities on climate action. My goal is to bridge the gap between data, policy, and real-world impact, contributing to change that’s both achievable and lasting.</p>
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I’m working at the intersection of sustainability, climate policy, and capital strategy. My projects focus on aligning financial incentives with climate action through modeling, stakeholder engagement, and grounded policy work.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    
+    <div class="project">
+      <h3>Capital Correction</h3>
+      <p>A modeling + strategy series exploring how capital can be restructured around environmental gain.</p>
+      <a href="#" class="button">View Project</a>
     </div>
-  </div>
-</section>
-  
- <section id="projects" class="project-section">
-  <h2>The Capital Correction Project</h2>
-  <p class="project-blurb">
-    This initiative models real-world trade-offs between economic growth and decarbonisation. 
-    The goal? Equip businesses and policymakers with better insight into emissions, risk pricing, and reduction strategy 
-    in hard-to-abate sectors like steel and cement. This is one step toward aligning capital with climate priorities.
-  </p>
 
-  <div class="app-card">
-    <h3>Explore the Simulation Model</h3>
-    <p>A hands-on tool to experiment with carbon cost, policy signals, and supply chain pressure in industrial sectors.</p>
-    <a href="https://carboncostsim-by-sonya.shinyapps.io/personal_esg_project/" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="launch-button">
-       Launch App <i class="fas fa-rocket"></i>
-    </a>
-  </div>
-</section>
+    <div class="project">
+      <h3>Green Finance Model</h3>
+      <p>Excel-based model using Indian data to track solar investment, emissions reduction, and job creation impact.</p>
+      <a href="#" class="button">Explore Model</a>
+    </div>
 
-<section id="writeups" class="section">
-  <h2 class="section-title">✍️ Thoughts & Write-ups</h2>
-  <p class="section-subtitle">
-    Here’s where I document what I’ve observed, questioned, and tried to understand - from climate adaptation strategies and environmental policy to the social mechanics of change.
-    The write-ups include short-form reflections on Medium, as well as my Master’s dissertation, which takes a data-driven look at labour productivity during heatwaves in India.
-  </p>
-
-  <div class="writeups-container">
-    <!-- Medium Article Card -->
-    <a href="https://medium.com/@rg.sonya22" target="_blank" class="writeup-card">
-      <div class="writeup-content">
-        <h3>View Medium Articles</h3>
-        <p>Short-form reflections on climate, systems, and strategy.</p>
-      </div>
-    </a>
-
-    <!-- Dissertation Card -->
-    <a href="your-dissertation.pdf" download class="writeup-card">
-      <div class="writeup-content">
-        <h3>Download Dissertation</h3>
-        <p>Research on heatwaves & productivity in high-heat regions.</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <a class="resume-button" href="Sonya Gopinath Resume Sustainability.pdf" target="_blank">Download Resume</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="icons">
-      <a href="mailto:sonya.r.gopinath@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/sonya-gopinath/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/yourgithub" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://medium.com/@rg.sonya22/outdated-metrics-in-esg-reports-the-revenue-centric-ethos-7b7b6054fcd5" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+    <div class="project">
+      <h3>Stakeholder Strategy Map</h3>
+      <p>A slide deck mapping sustainability incentives for steel producers, investors, and regulators in India.</p>
+      <a href="#" class="button">See Slides</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sonya Gopinath. All rights reserved.</p>
+    <p>&copy; 2025 Sonya | All rights reserved</p>
   </footer>
 </body>
 </html>
-
